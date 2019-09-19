@@ -6,8 +6,7 @@ Running this application requires to change mongoDB connection link with your ow
 > "mongodb+srv://**test(username)**:**test(password)**@mycluster-qmvgr.mongodb.net/**test(database_name)**?retryWrites=true&w=majority"
 
 <br/>
-*The script with data will be added shortly to this repository.*
-<br/>
+_The script with data will be added shortly to this repository._ <br/>
 
 Used technologies: <br/>
 * HTML
