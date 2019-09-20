@@ -75,3 +75,7 @@
     opacity: 0
   }
 }
+
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
