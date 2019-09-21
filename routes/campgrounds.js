@@ -16,6 +16,7 @@ router.get("/", (req, resp) => {
 
 router.post("/", middleware.isLoggedIn, (req, resp) => {
   let name = req.body.campgroundName;
+  let price = req.body.campgroundPrice;
   let image = req.body.campgroundImage;
   let description = req.body.campgroundDescription;
   let author = {
@@ -24,6 +25,7 @@ router.post("/", middleware.isLoggedIn, (req, resp) => {
   };
   let campground = {
     name: name,
+    price: price,
     image: image,
     description: description,
     author: author
@@ -32,6 +34,7 @@ router.post("/", middleware.isLoggedIn, (req, resp) => {
     if (err) {
       req.flash("error", "Creating unsuccessful: " + err.message);
     }
+    req.flash("success", `Campground ${campground.name} successfully added`);
     resp.redirect("/campgrounds");
   });
 });
